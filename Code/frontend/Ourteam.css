@@ -1,0 +1,136 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A291BC;
+    font-family: 'Lato', sans-serif;
+}
+
+.top-info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9E76B4;
+    padding: 10px 50px;
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D1C2D9;
+    padding: 20px 0;
+}
+
+.top-bar a,
+.top-bar img {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 15px;
+}
+
+.book-now-top a {
+    background-color: #F1EBF4;
+    color: #9E76B4;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #9E76B4;
+    display: inline-block;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-top a:hover {
+    background-color: #9E76B4;
+    color: white;
+    border: 2px solid #F1EBF4;
+}
+
+.service-page-content {
+    display: flex;
+    justify-content: center; 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team-member-profile {
+    text-align: left; 
+    margin-right: 20px; /* Spacing between profile and image if you have one */
+}
+
+.team-member-title {
+    /* Existing styles */
+}
+
+.team-member-bio {
+    /* Add any specific styles you need for the bio */
+}
+
+.team-member-certifications {
+    background-color: #fff; /* or your preferred background color */
+    padding: 20px;
+    margin-top: 30px; /* Adjust as needed for spacing */
+    border-radius: 10px; /* Optional: if you want rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: for shadow */
+}
+
+.certifications-block {
+    background-color: #A291BC; /* Adjust the color to match your theme */
+    padding: 20px;
+    margin-top: 20px; /* Spacing from the top */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box shadow for depth */
+    color: white; /* Text color */
+    font-family: 'Lato', sans-serif; /* Font family */
+}
+
+.certifications-block h2 {
+    margin-top: 0;
+    margin-bottom: 20px; /* Spacing after the heading */
+    font-weight: normal; /* Adjust the font weight as needed */
+    text-transform: uppercase; /* Uppercase styling for the heading */
+}
+
+.certifications-block ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.certifications-block ul li {
+    padding: 5px 0; /* Spacing between list items */
+    border-bottom: 1px solid #E8DEED; /* Add a border for each item, adjust the color as needed */
+}
+
+.certifications-block ul li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+/* Other CSS below... */
+
+
+@media (max-width: 768px) {
+    .service-page-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member-profile, .team-image {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .team-member-certifications, .team-member-bio {
+        text-align: center;
+    }
+
+    ul li {
+        text-align: center; /* Center align list items */
+    }
+}
