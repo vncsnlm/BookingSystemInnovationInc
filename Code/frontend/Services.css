@@ -109,3 +109,86 @@ body, html {
         margin-bottom: 10px;
     }
 }
+
+/* ... existing styles ... */
+
+.service-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #A291BC; /* Adjust the background color as needed */
+}
+
+.left-column {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.right-column {
+    flex-basis: 50%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* This gives a transparent white background */
+    border-radius: 10px;
+    margin-left: 20px; /* Add some space between the columns */
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-title {
+    font-family: 'Dancing Script', cursive;
+    color: #5E2750; /* Adjust the font color as needed */
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.service-description {
+    text-align: left;
+    font-size: 1rem;
+    color: #5E2750; /* Adjust the font color as needed */
+    margin-bottom: 1em;
+}
+
+.service-pricing {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.service-pricing p {
+    margin: 0.5em 0;
+    color: #5E2750; /* Adjust the font color as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-page-content {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        flex-basis: auto; /* Let it take the necessary space */
+        margin-left: 0; /* Reset margin */
+        margin-bottom: 20px; /* Add some space between the stacked columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-page-content {
+        padding: 20px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+    }
+
+    .top-bar a, .top-bar img {
+        margin-bottom: 10px;
+    }
+
+    .service-title {
+        font-size: 2rem; /* Adjust the font size for mobile */
+    }
+}
