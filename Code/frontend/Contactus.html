@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,14 @@
     <link rel="stylesheet" href="Contactus.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("Y7b4FXQna6pfsED7c");
+        })();
+    </script>
 </head>
+
 <body>
     <div class="top-info-bar">
         <div class="contact-info">
@@ -31,21 +39,23 @@
     <h1>Contact + Follow us</h1>
     <div class="contact-container">
         <div class="contact-details">
-          <p>Email: kaanmassage@gmail.com</p>
-          <p>Phone: (587) 434-9251</p>
-          <p>Facebook: Kaan Massage</p>
-          <p>Instagram: kaanmassage</p>
+            <p>Email: kaanmassage@gmail.com</p>
+            <p>Phone: (587) 434-9251</p>
+            <p>Facebook: Kaan Massage</p>
+            <p>Instagram: kaanmassage</p>
         </div>
-    <div class="contact-form">
-        <form action="your-server-side-script" method="post">
-            <input type="text" name="fullname" placeholder="YOUR FULL NAME" required>
-            <input type="email" name="email" placeholder="YOUR EMAIL" required>
-            <input type="tel" name="phone" placeholder="YOUR PHONE NUMBER" required>
-            <input type="text" name="massage" placeholder="TYPE OF MASSAGE AND DURATION REQUESTED">
-            <input type="text" name="referral" placeholder="HOW DID YOU HEAR ABOUT US?">
-            <textarea name="message" placeholder="YOUR MESSAGE..." required></textarea>
-            <button type="submit">SEND</button>
-        </form>
-    </div>
+        <div class="contact-form">
+            <form id="contactForm" method="post">
+                <input type="text" name="sender_name" placeholder="YOUR FULL NAME" required>
+                <input type="email" name="sender_email" placeholder="YOUR EMAIL" required>
+                <input type="tel" name="phone" placeholder="YOUR PHONE NUMBER" required>
+                <input type="text" name="massage" placeholder="TYPE OF MASSAGE AND DURATION REQUESTED">
+                <input type="text" name="referral" placeholder="HOW DID YOU HEAR ABOUT US?">
+                <textarea name="message" placeholder="YOUR MESSAGE..." required></textarea>
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+        <script src="contact.js"></script>
 </body>
+
 </html>

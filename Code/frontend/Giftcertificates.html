@@ -3,11 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ka'an Massage and Beauty - Contact Us</title>
+    <title>Ka'an Massage and Beauty - Gift Certificates</title>
     <link rel="stylesheet" href="Giftcertificates.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init(
+            "Y7b4FXQna6pfsED7c"
+        );
+    </script>
+    <script src="script.js"> </script>
 </head>
 
 <body>
@@ -32,27 +40,24 @@
     </div>
     <h1>Gift certificates</h1>
     <div class="contact-form">
-        <form action="your-server-side-script" method="post">
-            <input type="text" name="fullname" placeholder="FIRST NAME" required>
-            <input type="email" name="email" placeholder="LAST NAME" required>
-            <input type="tel" name="phone" placeholder="YOUR EMAIL" required>
-            <input type="text" name="massage" placeholder="RECEIVER FIRST NAME">
-            <input type="text" name="referral" placeholder="RECEIVER LAST NAME">
-            <select name="giftAmount" id="giftAmount" multiple required>
-                <option value="" disabled selected>Select amount(s)</option>
+        <form id="giftCertificateForm">
+            <input type="text" id="sender_name" name="sender_name" placeholder="YOUR NAME" required>
+            <input type="email" id="sender_email" name="sender_email" placeholder="YOUR EMAIL" required>
+            <input type="text" id="receiver_name" name="receiver_name" placeholder="RECEIVER'S NAME" required>
+            <input type="email" id="receiver_email" name="receiver_email" placeholder="RECEIVER'S EMAIL" required>
+            <select name="giftAmount" id="giftAmount" required>
+                <option value="" disabled selected>Select amount</option>
                 <option value="50">$50</option>
-                <option value="50">$60</option>
-                <option value="50">$70</option>
-                <option value="50">$80</option>
-                <option value="50">$90</option>
+                <option value="60">$60</option>
+                <option value="70">$70</option>
+                <option value="80">$80</option>
+                <option value="90">$90</option>
                 <option value="100">$100</option>
                 <option value="150">$150</option>
                 <option value="200">$200</option>
-                <option value="200">$200</option>
+
             </select>
-            <button type="submit">SEND</button>
+            <button type="submit" onclick="sendMail()">SEND</button>
         </form>
     </div>
-</body>
-
 </html>

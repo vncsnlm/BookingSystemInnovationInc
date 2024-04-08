@@ -1,11 +1,10 @@
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #C3B1D1;
-    font-family: 'Balgin', sans-serif;
+    background-color: #A291BC; /* This sets the background color for the entire page */
+    font-family: 'Lato', sans-serif;
 }
 
 .top-info-bar {
@@ -25,60 +24,52 @@ html {
     padding: 20px 0;
 }
 
-.nav a, .book-now-top a {
-    text-decoration: none;
+.top-bar a, .top-bar img {
     color: black;
-    margin: 0 15px;
+    text-decoration: none;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    margin: 0 15px;
 }
+
+.book-now-top a {
+    background-color: #F1EBF4;
+    color: #9E76B4;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #9E76B4;
+    display: inline-block;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-top a:hover {
+    background-color: #9E76B4;
+    color: white;
+    border: 2px solid #F1EBF4;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80%;
-    color: #C3B1D1;
+    color: #FFFFFF; 
+    padding: 20px; 
 }
 
-.slogan {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 50px 0;
-    font-family: 'Dancing Script', cursive;
+.main-content h1 {
+    margin: 0 0 20px; 
+    color: inherit; 
 }
 
-.book-button {
-    background-color: #A883B4;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 20px;
+.main-content ul {
+    list-style-type: none;
+    padding: 0; 
 }
 
-.slogan span {
-    font-size: 3rem; /* Increased size for larger text */
-    color: #9E76B4; /* Change text color */
+.main-content li {
+    margin-bottom: 10px; 
 }
 
-.top-bar a {
-    color: black; /* Change text color */
-    text-decoration: none; /* Remove underlines */
-}
-
-.book-now-top a {
-    background-color: #F1EBF4; /* Light background color */
-    color: #9E76B4; /* Updated text color */
-    padding: 12px 25px; /* Adjust padding for size */
-    text-decoration: none; /* Remove underline */
-    border-radius: 25px; /* Rounded corners for button-like appearance */
-    font-weight: bold; /* Bold text */
-    border: 2px solid #9E76B4; /* Add border to match text color */
-    display: inline-block; /* Ensure proper spacing and alignment */
-}
-.nav a, .book-now-top a, body {
-    font-family: 'Lato', sans-serif;
-}
