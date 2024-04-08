@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/IMG_5620.jpg');
+    background-image: url('/Users/vineiva/BookingSystemInnovationInc/images/IMG_5620.jpg');
     background-size: cover;
     font-family: 'Balgin', sans-serif;
 }
@@ -27,7 +27,7 @@ body, html {
 
 .logo-container img {
     height: 80px;
-    margin: 0 20px; /* Ensure logo is properly spaced */
+    margin: 0 20px; 
 }
 
 .nav a, .book-now-top a {
@@ -88,3 +88,55 @@ body, html {
 .nav a, .book-now-top a, body {
     font-family: 'Lato', sans-serif;
 }
+
+.container {
+    width: 100%; /* Instead of fixed width like 960px */
+  }
+  
+  /* Flexbox example */
+  .top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* CSS Grid example */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For tablets */
+    .top-bar a, .logo-container img {
+      padding: 5px;
+      font-size: 14px;
+    }
+    .main-content {
+      padding: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* For mobile phones */
+    .top-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-container img {
+      height: 40px; /* smaller size for smaller screens */
+    }
+    .book-button {
+      width: 100%;
+      padding: 12px 0; /* more padding for a taller button */
+    }
+    .main-content .slogan {
+      font-size: smaller; /* adjust the font size for smaller screens */
+    }
+  }
+  

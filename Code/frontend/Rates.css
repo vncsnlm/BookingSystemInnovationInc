@@ -113,8 +113,6 @@ html {
     text-transform: uppercase;
 }
 
-
-
 @media (max-width: 768px) {
     .service {
         width: calc(50% - 20px);
@@ -126,3 +124,54 @@ html {
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablets */
+    .service {
+      width: calc(50% - 20px); /* 2 columns */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Adjustments for mobile phones */
+    .top-bar a,
+    .book-now-top a {
+      padding: 10px 5px; /* Reduce padding */
+      font-size: 12px; /* Reduce font size */
+    }
+  
+    .top-bar {
+      flex-direction: column;
+      text-align: center; /* Center links */
+    }
+  
+    .logo-container img {
+      width: 50px; /* Reduce logo size */
+    }
+  
+    .service {
+      width: 100%; /* Full width for small screens */
+    }
+  
+    .services-container {
+      display: block; /* Stack services vertically */
+    }
+  }
+  
+  .service img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute service blocks */
+  }
+  
+  .service {
+    width: calc(33.333% - 20px); /* 3 columns by default */
+    margin-bottom: 20px; /* Space between rows */
+    /* Add padding, border-radius, etc., as needed */
+  }
+  

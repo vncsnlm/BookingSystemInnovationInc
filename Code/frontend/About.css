@@ -17,6 +17,11 @@ html {
     color: white;
 }
 
+.logo-container img {
+    height: 80px;
+    margin: 0 20px; 
+}
+
 .top-bar {
     display: flex;
     justify-content: space-around;

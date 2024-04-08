@@ -51,12 +51,16 @@ body, html {
 }
 
 .main-content {
+    color: #FFFFFF; 
+    padding: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #FFFFFF; 
-    padding: 20px; 
+    justify-content: center; /* This centers the content vertically */
+    height: 100%; /* This makes .main-content take up the full height of the viewport */
+    text-align: center; /* This centers the text horizontally */
+    margin: 0; /* Removes default margin */
+    padding: 0;
 }
 
 .main-content h1 {
@@ -72,4 +76,3 @@ body, html {
 .main-content li {
     margin-bottom: 10px; 
 }
-
