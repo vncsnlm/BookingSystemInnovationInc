@@ -110,8 +110,6 @@ body, html {
     }
 }
 
-/* ... existing styles ... */
-
 .service-page-content {
     display: flex;
     justify-content: center;
