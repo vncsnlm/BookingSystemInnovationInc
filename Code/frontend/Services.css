@@ -51,133 +51,80 @@ body, html {
 }
 
 .service-page-content {
-    padding: 50px;
-    text-align: center;
-}
-
-.service-title {
-    font-family: 'Dancing Script', cursive;
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 1em;
-}
-
-.service-description, .service-pricing {
-    font-family: 'Lato', sans-serif;
-    text-align: left;
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-.service-image {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1em;
-}
-
-.service-description {
-    text-align: left;
-    font-size: 1rem;
-    color: #ffffff;
-    margin-bottom: 1em;
-}
-
-.service-pricing {
-    background-color: #A291BC;
-    border-radius: 10px;
-    padding: 20px;
-    display: inline-block;
-    margin-bottom: 1em;
-}
-
-.service-pricing p {
-    margin: 0.5em 0;
-}
-
-@media (max-width: 768px) {
-    .service-page-content {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .top-bar {
-        flex-direction: column;
-    }
-
-    .top-bar a, .top-bar img {
-        margin-bottom: 10px;
-    }
-}
-
-.service-page-content {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    background-color: #A291BC; /* Adjust the background color as needed */
+    background-color: #A291BC;
+    flex-wrap: wrap;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 20px;
 }
 
 .left-column {
-    flex-basis: 50%;
-    padding: 20px;
+    max-width: 50%;
 }
 
 .right-column {
-    flex-basis: 50%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* This gives a transparent white background */
+    max-width: 50%;
+    background-color: #A291BC;
     border-radius: 10px;
-    margin-left: 20px; /* Add some space between the columns */
+    margin-left: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .service-image {
     width: 100%;
     border-radius: 10px;
+    display: block;
 }
 
 .service-title {
     font-family: 'Dancing Script', cursive;
-    color: #5E2750; /* Adjust the font color as needed */
+    color: #ffffff;
     font-size: 2.5rem;
     margin-bottom: 1em;
 }
 
-.service-description {
+.pricing-line {
+    border: 0;
+    height: 2px;
+    background: #FFFFFF; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+
+.service-description, .service-pricing {
     text-align: left;
     font-size: 1rem;
-    color: #5E2750; /* Adjust the font color as needed */
-    margin-bottom: 1em;
+    color: #ffffff;
 }
 
 .service-pricing {
-    text-align: left;
     margin-bottom: 1em;
 }
 
 .service-pricing p {
     margin: 0.5em 0;
-    color: #5E2750; /* Adjust the font color as needed */
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .service-page-content {
         flex-direction: column;
     }
 
     .left-column, .right-column {
-        flex-basis: auto; /* Let it take the necessary space */
-        margin-left: 0; /* Reset margin */
-        margin-bottom: 20px; /* Add some space between the stacked columns */
+        max-width: none;
+        margin-left: 0;
     }
 }
 
 @media (max-width: 480px) {
-    .service-page-content {
-        padding: 20px;
-    }
-
     .top-bar {
         flex-direction: column;
     }
@@ -187,6 +134,6 @@ body, html {
     }
 
     .service-title {
-        font-size: 2rem; /* Adjust the font size for mobile */
+        font-size: 2rem;
     }
 }
